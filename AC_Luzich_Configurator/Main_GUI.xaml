@@ -57,12 +57,12 @@
                 <!-- Grid con overlay con ZIndex=1 (sopra) -->
                 <Grid Panel.ZIndex="1">
                     <Grid.Background>
-                        <ImageBrush ImageSource="Resources/OVERLAY.png" Stretch="Fill"/>
+                        <ImageBrush ImageSource="Resources/overlay_main.png" Stretch="Fill"/>
                     </Grid.Background>
                     <Image x:Name="tracks_Layout_box" Margin="741,747,730,105" Source="Resources/outline.png" Stretch="Fill" Visibility="Visible"/>
                     <Image x:Name="tracks_image_box" HorizontalAlignment="Left" Height="216" Margin="198,612,0,0" VerticalAlignment="Top" Width="383" Source="Resources/track_preview.png"/>
                 </Grid>
-                <Rectangle HorizontalAlignment="Left" Height="177" Margin="870,451,0,0" VerticalAlignment="Top" Width="180" MouseEnter="Rectangle_MouseEnter" Fill="Black" Opacity="0" MouseLeave="Rectangle_MouseLeave" Panel.ZIndex="2" MouseDown="Rectangle_MouseDown"/>
+                <Rectangle x:Name="Start_btn_rect" HorizontalAlignment="Left" Height="177" Margin="870,451,0,0" VerticalAlignment="Top" Width="180" Fill="Black" Opacity="0" Panel.ZIndex="2"/>
 
                 <!-- ListBox trasparente con ZIndex=2 (ancora più sopra) -->
                 <ListBox x:Name="Track_Selection_lst" Background="Transparent" 
@@ -97,7 +97,7 @@
 
 
                 </ListBox>
-                <Image x:Name="startOn_btn_img" HorizontalAlignment="Left" Height="240" Margin="843,420,0,0" VerticalAlignment="Top" Width="239" Source="Resources/StartON.png" Panel.ZIndex="1" Stretch="Fill" Visibility="Hidden"/>
+                <Image x:Name="Start_btn_img" HorizontalAlignment="Left" Height="240" Margin="843,420,0,0" VerticalAlignment="Top" Width="239" Source="Resources/start_OFF.png" Panel.ZIndex="1" Stretch="Fill" />
             </Grid>
         </Viewbox>
     </Grid>

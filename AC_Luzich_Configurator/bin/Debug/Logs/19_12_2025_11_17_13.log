@@ -1,0 +1,16 @@
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+Date :19/12/2025 11:17:13
+
+Message :Si è verificato un errore 
+
+------------------------------------------------------------------------------------------------
+
+inner Exception
+
+------------------------------------------------------------------------------------------------
+
+StackTrace :   at AC_Configurator_STDL.Main_GUI.Window_Loaded(Object sender, RoutedEventArgs e) in C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_Configurator\Main_GUI.xaml.cs:line 46
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+

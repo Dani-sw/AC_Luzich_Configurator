@@ -59,9 +59,23 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Cars.cs" />
+    <Compile Include="Controls\MessageBox_Custom.xaml.cs">
+      <DependentUpon>MessageBox_Custom.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Global_var.cs" />
+    <Compile Include="IniFile.cs" />
+    <Compile Include="LogWriter.cs" />
+    <Compile Include="Network.cs" />
+    <Compile Include="Preferences.cs" />
+    <Compile Include="Start_button.cs" />
     <Compile Include="Tracks.cs" />
     <Compile Include="Tracks_utility.cs" />
+    <Compile Include="Utility.cs" />
+    <Compile Include="Configurator_file.cs" />
+    <Page Include="Controls\MessageBox_Custom.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Main_GUI.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -99,6 +113,12 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="System\AC_Configurator_STDL_ConfigFile.ini">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="System\configurator_parameters.ini">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -119,20 +139,25 @@
     <Resource Include="Resources\background.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\OVERLAY.png" />
+    <Resource Include="Resources\overlay_main.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\car_overlay.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\StartON.png" />
+    <Resource Include="Resources\start_ON.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\outline.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controls\" />
     <Folder Include="Log\" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\start_OFF.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>if not exist "$(TargetDir)Logs" mkdir "$(TargetDir)Logs"</PostBuildEvent>
+  </PropertyGroup>
 </Project>

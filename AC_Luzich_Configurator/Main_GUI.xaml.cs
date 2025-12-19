@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using AC_Configurator_STDL.Controls;
+using System;
+using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Input;
 
@@ -13,21 +15,50 @@ namespace AC_Configurator_STDL
 
         public Main_GUI()
         {
-            InitializeComponent();
-           
+            try
+            {
+                InitializeComponent();
+
+
+            }
+
+            catch (System.Exception ex)
+            {
+                MessageBox_Custom.Show(ex.Message, "Application inizialize error", MessageBox_Custom.MessageType.Error);
+                LogWriter.Error_Trace(ex);
+            }
+
         }
 
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            Global_var.GUI_Window = this;
+            try
+            {
 
-            List<Tracks> AC_Tracks_List = AC_Tracks_Function.Fill_AC_Tracks_List();
-            List<Cars> AC_Cars_List = AC_Cars_Functions.Fill_AC_Car_List();
+                Global_var.GUI_Window = this;
 
-            AC_Tracks_Function.Fill_Tracks_Listbox_control(Track_Selection_lst);
-            AC_Cars_Functions.Fill_Cars_Listbox(Car_Selection_lst, CarSkin_Selection_lst);
+                Preferences.Load();
+                Start_button.initialize();
+
+                List<Tracks> AC_Tracks_List = AC_Tracks_Function.Fill_AC_Tracks_List();
+                List<Cars> AC_Cars_List = AC_Cars_Functions.Fill_AC_Car_List();
+
+                AC_Tracks_Function.Fill_Tracks_Listbox_control(Track_Selection_lst);
+                AC_Cars_Functions.Fill_Cars_Listbox(Car_Selection_lst, CarSkin_Selection_lst);
+                
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox_Custom.Show(ex.Message, "Application Loading error", MessageBox_Custom.MessageType.Error);
+                LogWriter.Error_Trace(ex);
+                Utility.OpenSessionsFolder(Global_var.App_path + Global_var.logs_path.Trim('\\'));
+
+            }
         }
+
 
         // Permette di trascinare la finestra dalla barra del titolo
         private void TitleBar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -71,24 +102,12 @@ namespace AC_Configurator_STDL
             }
         }
 
-        private void Rectangle_MouseEnter(object sender, MouseEventArgs e)
-        {
-            startOn_btn_img.Visibility = Visibility.Visible;
-        }
-
-        private void Rectangle_MouseLeave(object sender, MouseEventArgs e)
-        {
-            startOn_btn_img.Visibility = Visibility.Hidden;
-        }
-
         private void Window_Closed(object sender, System.EventArgs e)
         {
             Application.Current.Shutdown();
         }
 
-        private void Rectangle_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            MessageBox.Show(Global_var.AC_CarSkin + " " + Global_var._AC_Cars.ACname+"  "+Global_var.AC_Track.Tracks_info.ACname);
-        }
+        // MessageBox.Show(Global_var.AC_CarSkin + " " + Global_var.IP_PC_CLient+"  "+Global_var.AC_Track.Tracks_info.ACname);
+        
     }
 }

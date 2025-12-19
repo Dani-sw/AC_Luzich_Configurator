@@ -4,8 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WpfApp1;
-
+using Ini.Net;
 
 namespace AC_Configurator_STDL
 {
@@ -14,7 +13,12 @@ namespace AC_Configurator_STDL
         static public Main_GUI GUI_Window = new Main_GUI(); 
         static public Tracks_utility AC_Track = new Tracks_utility();
         static public Cars _AC_Cars = new Cars();
-        
+
+        public static string App_path = AppDomain.CurrentDomain.BaseDirectory;
+        public static string logs_path = @"Logs\\";
+        public static IniFile ConfigFile = new IniFile(@"System\\AC_Configurator_STDL_ConfigFile.ini");
+        public static IniFile Configurator_Parameters_ini_file = new IniFile(@"System\\configurator_parameters.ini");
+
 
         static public string AC_PRO = "0";
         static public string AC_PATH = @"C:\AC PRO";
@@ -71,5 +75,6 @@ namespace AC_Configurator_STDL
         //IP CLIENT
         static public string IP_PC_CLient = "0.0.0.0";
 
+        //
     }
 }

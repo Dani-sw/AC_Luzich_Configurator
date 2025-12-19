@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_testGUI\obj\Debug\
+C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_Configurator\obj\Debug\
 AC_Configurator_STDL
 none
 false
 DEBUG;TRACE
-C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_testGUI\App.xaml
-1-1076212574
+C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_Configurator\App.xaml
+2-1130950049
 
-11-1194792615
+19-1253148316
 14-1136074773
-Main_GUI.xaml;
+Controls\MessageBox_Custom.xaml;Main_GUI.xaml;
 
 False
 
