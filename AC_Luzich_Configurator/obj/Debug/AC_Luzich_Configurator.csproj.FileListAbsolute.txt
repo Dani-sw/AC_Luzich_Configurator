@@ -1,0 +1,53 @@
+C:\Users\assir\Desktop\AC_Luzich testGUI\AC_Luzich_testGUI\AC_Luzich_testGUI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\assir\Desktop\AC_Luzich testGUI\AC_Luzich_testGUI\AC_Luzich_testGUI\bin\Debug\Newtonsoft.Json.xml
+C:\Users\assir\Desktop\AC_Luzich testGUI\AC_Luzich_testGUI\AC_Luzich_testGUI\obj\Debug\App.g.cs
+C:\Users\assir\Desktop\AC_Luzich testGUI\AC_Luzich_testGUI\AC_Luzich_testGUI\obj\Debug\AC_Luzich_Configurator.csproj.GenerateResource.cache
+C:\Users\assir\Desktop\AC_Luzich testGUI\AC_Luzich_testGUI\AC_Luzich_testGUI\obj\Debug\AC_Luzich_Configurator.csproj.CoreCompileInputs.cache
+C:\Users\assir\Desktop\AC_Luzich testGUI\AC_Luzich_testGUI\AC_Luzich_testGUI\obj\Debug\AC_Luzich_Configurator.csproj.CopyComplete
+C:\Users\assir\Desktop\AC_Luzich testGUI\AC_Luzich_testGUI\AC_Luzich_testGUI\bin\Debug\AC_Configurator_STDL.exe.config
+C:\Users\assir\Desktop\AC_Luzich testGUI\AC_Luzich_testGUI\AC_Luzich_testGUI\bin\Debug\AC_Configurator_STDL.exe
+C:\Users\assir\Desktop\AC_Luzich testGUI\AC_Luzich_testGUI\AC_Luzich_testGUI\bin\Debug\AC_Configurator_STDL.pdb
+C:\Users\assir\Desktop\AC_Luzich testGUI\AC_Luzich_testGUI\AC_Luzich_testGUI\obj\Debug\AC_Configurator_STDL_MarkupCompile.cache
+C:\Users\assir\Desktop\AC_Luzich testGUI\AC_Luzich_testGUI\AC_Luzich_testGUI\obj\Debug\AC_Configurator_STDL_MarkupCompile.lref
+C:\Users\assir\Desktop\AC_Luzich testGUI\AC_Luzich_testGUI\AC_Luzich_testGUI\obj\Debug\AC_Configurator_STDL.g.resources
+C:\Users\assir\Desktop\AC_Luzich testGUI\AC_Luzich_testGUI\AC_Luzich_testGUI\obj\Debug\AC_Configurator_STDL.Properties.Resources.resources
+C:\Users\assir\Desktop\AC_Luzich testGUI\AC_Luzich_testGUI\AC_Luzich_testGUI\obj\Debug\AC_Configurator_STDL.exe
+C:\Users\assir\Desktop\AC_Luzich testGUI\AC_Luzich_testGUI\AC_Luzich_testGUI\obj\Debug\AC_Configurator_STDL.pdb
+C:\Users\assir\Desktop\AC_Luzich testGUI\AC_Luzich_testGUI\AC_Luzich_testGUI\obj\Debug\Main_GUI.g.cs
+C:\Users\assir\Desktop\AC_Luzich testGUI\AC_Luzich_testGUI\AC_Luzich_testGUI\obj\Debug\Main_GUI.baml
+C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_testGUI\bin\Debug\AC_Configurator_STDL.exe.config
+C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_testGUI\bin\Debug\AC_Configurator_STDL.exe
+C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_testGUI\bin\Debug\AC_Configurator_STDL.pdb
+C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_testGUI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_testGUI\bin\Debug\Newtonsoft.Json.xml
+C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_testGUI\obj\Debug\AC_Luzich_Configurator.csproj.AssemblyReference.cache
+C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_testGUI\obj\Debug\Main_GUI.g.cs
+C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_testGUI\obj\Debug\App.g.cs
+C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_testGUI\obj\Debug\AC_Configurator_STDL_MarkupCompile.cache
+C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_testGUI\obj\Debug\AC_Configurator_STDL_MarkupCompile.lref
+C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_testGUI\obj\Debug\Main_GUI.baml
+C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_testGUI\obj\Debug\AC_Configurator_STDL.g.resources
+C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_testGUI\obj\Debug\AC_Configurator_STDL.Properties.Resources.resources
+C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_testGUI\obj\Debug\AC_Luzich_Configurator.csproj.GenerateResource.cache
+C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_testGUI\obj\Debug\AC_Luzich_Configurator.csproj.CoreCompileInputs.cache
+C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_testGUI\obj\Debug\AC_Luzich_Configurator.csproj.CopyComplete
+C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_testGUI\obj\Debug\AC_Configurator_STDL.exe
+C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_testGUI\obj\Debug\AC_Configurator_STDL.pdb
+C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_Configurator\bin\Debug\AC_Configurator_STDL.exe.config
+C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_Configurator\bin\Debug\AC_Configurator_STDL.exe
+C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_Configurator\bin\Debug\AC_Configurator_STDL.pdb
+C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_Configurator\bin\Debug\Newtonsoft.Json.dll
+C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_Configurator\bin\Debug\Newtonsoft.Json.xml
+C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_Configurator\obj\Debug\AC_Luzich_Configurator.csproj.AssemblyReference.cache
+C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_Configurator\obj\Debug\Main_GUI.g.cs
+C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_Configurator\obj\Debug\App.g.cs
+C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_Configurator\obj\Debug\AC_Configurator_STDL_MarkupCompile.cache
+C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_Configurator\obj\Debug\AC_Configurator_STDL_MarkupCompile.lref
+C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_Configurator\obj\Debug\Main_GUI.baml
+C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_Configurator\obj\Debug\AC_Configurator_STDL.g.resources
+C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_Configurator\obj\Debug\AC_Configurator_STDL.Properties.Resources.resources
+C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_Configurator\obj\Debug\AC_Luzich_Configurator.csproj.GenerateResource.cache
+C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_Configurator\obj\Debug\AC_Luzich_Configurator.csproj.CoreCompileInputs.cache
+C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_Configurator\obj\Debug\AC_Luzich_Configurator.csproj.CopyComplete
+C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_Configurator\obj\Debug\AC_Configurator_STDL.exe
+C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_Configurator\obj\Debug\AC_Configurator_STDL.pdb
