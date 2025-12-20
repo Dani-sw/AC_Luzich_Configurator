@@ -1,23 +1,24 @@
-﻿<Window x:Class="AC_Configurator_STDL.Main_GUI"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AC_Configurator_STDL"
+        xmlns:Controls="clr-namespace:AC_Configurator_STDL.Controls" x:Class="AC_Configurator_STDL.Main_GUI"
         mc:Ignorable="d"
         Title="MainWindow" Height="900" Width="1600"
         MinWidth="1600" MinHeight="900" Loaded="Window_Loaded" Closed="Window_Closed">
     <Window.Resources>
         <!-- Stile per ListBoxItem -->
-        <Style x:Key="TransparentListBoxItem" TargetType="ListBoxItem">
+        <Style x:Key="TransparentListBoxItem" TargetType="{x:Type ListBoxItem}">
             <Setter Property="Background" Value="Transparent"/>
             <Setter Property="Foreground" Value="White"/>
-            <Setter Property="FontSize" Value="20"/>
-            <Setter Property="FontFamily" Value="Downlink"/>
-            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontFamily" Value="./Fonts/#3ds Light"/>
+            <Setter Property="Padding" Value="2"/>
             <Setter Property="Template">
                 <Setter.Value>
-                    <ControlTemplate TargetType="ListBoxItem">
+                    <ControlTemplate TargetType="{x:Type ListBoxItem}">
                         <Border Background="{TemplateBinding Background}" 
                                 Padding="{TemplateBinding Padding}">
                             <ContentPresenter/>
@@ -59,10 +60,27 @@
                     <Grid.Background>
                         <ImageBrush ImageSource="Resources/overlay_main.png" Stretch="Fill"/>
                     </Grid.Background>
-                    <Image x:Name="tracks_Layout_box" Margin="741,747,730,105" Source="Resources/outline.png" Stretch="Fill" Visibility="Visible"/>
-                    <Image x:Name="tracks_image_box" HorizontalAlignment="Left" Height="216" Margin="198,612,0,0" VerticalAlignment="Top" Width="383" Source="Resources/track_preview.png"/>
+                    <Image x:Name="tracks_Layout_box" Margin="91,769,1439,106" Source="Resources/outline.png" Stretch="Fill" Visibility="Visible"/>
+                    <Image x:Name="tracks_image_box" HorizontalAlignment="Left" Height="201" Margin="125,520,0,0" VerticalAlignment="Top" Width="362" Source="Resources/track_preview.png"/>
+
+
                 </Grid>
                 <Rectangle x:Name="Start_btn_rect" HorizontalAlignment="Left" Height="177" Margin="870,451,0,0" VerticalAlignment="Top" Width="180" Fill="Black" Opacity="0" Panel.ZIndex="2"/>
+                <Label x:Name="TyreCond_lbl" Content="Tyre Condition" HorizontalAlignment="Left" Margin="623,783,0,0" VerticalAlignment="Top" FontSize="24" FontFamily="/AC_Configurator_STDL;component/Fonts/#3ds Light" Foreground="White" Panel.ZIndex="2"/>
+                <Controls:Custom_Checkbox x:Name="TyreCond_New_chkbox" LabelText="New" CheckerSize="29" HorizontalAlignment="Left" Height="33" Margin="853,787,0,0" VerticalAlignment="Top" IsChecked="False" Width="104" FontFamily="/AC_Configurator_STDL;component/Fonts/#3ds Light" Panel.ZIndex="2"  />
+                <Controls:Custom_Checkbox x:Name="TyreCond_Used_chkbox"  LabelText="Used" CheckerSize="29" HorizontalAlignment="Left" Height="33" Margin="975,787,0,0" IsChecked="True" VerticalAlignment="Top" Width="108" FontFamily="/AC_Configurator_STDL;component/Fonts/#3ds Light"  Panel.ZIndex="2" />
+                <Label x:Name="TyreWear_lbl" Content="Tyre Wear" HorizontalAlignment="Left" Margin="623,825,0,0" VerticalAlignment="Top" FontSize="24" FontFamily="/AC_Configurator_STDL;component/Fonts/#3ds Light" Foreground="White" Panel.ZIndex="2"/>
+                <Controls:Custom_Checkbox x:Name="TyreDegr_ON_chkbox" IsChecked="True" LabelText="On" CheckerSize="29" HorizontalAlignment="Left" Height="33" Margin="853,829,0,0" VerticalAlignment="Top" Width="104" FontFamily="/AC_Configurator_STDL;component/Fonts/#3ds Light" Panel.ZIndex="2"  />
+                <Controls:Custom_Checkbox x:Name="TyreDegr_OFF_chkbox"  LabelText="Off" CheckerSize="29" HorizontalAlignment="Left" Height="33" Margin="975,829,0,0" IsChecked="False" VerticalAlignment="Top" Width="108" FontFamily="/AC_Configurator_STDL;component/Fonts/#3ds Light"  Panel.ZIndex="2" />
+                <Label x:Name="FuelCons_lbl" Content="Tyre Degradation" HorizontalAlignment="Left" Margin="623,867,0,0" VerticalAlignment="Top" FontSize="24" FontFamily="/AC_Configurator_STDL;component/Fonts/#3ds Light" Foreground="White" Panel.ZIndex="2"/>
+                <Controls:Custom_Checkbox x:Name="FuelCons_ON_chkbox" IsChecked="True" LabelText="On" CheckerSize="29" HorizontalAlignment="Left" Height="33" Margin="853,871,0,0" VerticalAlignment="Top" Width="104" FontFamily="/AC_Configurator_STDL;component/Fonts/#3ds Light" Panel.ZIndex="2"  />
+                <Controls:Custom_Checkbox x:Name="FuelCons_OFF_chkbox"  LabelText="Off" CheckerSize="29" HorizontalAlignment="Left" Height="33" Margin="975,871,0,0" IsChecked="False" VerticalAlignment="Top" Width="108" FontFamily="/AC_Configurator_STDL;component/Fonts/#3ds Light"  Panel.ZIndex="2" />
+                <Label x:Name="TrackGrip_lbl" Content="Track Grip" HorizontalAlignment="Left" Margin="623,909,0,0" VerticalAlignment="Top" FontSize="24" FontFamily="/AC_Configurator_STDL;component/Fonts/#3ds Light" Foreground="White" Panel.ZIndex="2"/>
+                <Controls:Custom_Checkbox x:Name="TrackGrip_Race_chkbox" IsChecked="True" LabelText="Race" CheckerSize="29" HorizontalAlignment="Left" Height="33" Margin="853,913,0,0" VerticalAlignment="Top" Width="104" FontFamily="/AC_Configurator_STDL;component/Fonts/#3ds Light" Panel.ZIndex="2"  />
+                <Controls:Custom_Checkbox x:Name="TrackGrip_Green_chkbox"  LabelText="Green" CheckerSize="29" HorizontalAlignment="Left" Height="33" Margin="975,913,0,0" IsChecked="False" VerticalAlignment="Top" Width="108" FontFamily="/AC_Configurator_STDL;component/Fonts/#3ds Light"  Panel.ZIndex="2" />
+                <Label x:Name="FuelLoad_lbl" Content="Fuel Load" HorizontalAlignment="Left" Margin="623,951,0,0" VerticalAlignment="Top" FontSize="24" FontFamily="/AC_Configurator_STDL;component/Fonts/#3ds Light" Foreground="White" Panel.ZIndex="2"/>
+                <Controls:Custom_Slider x:Name="FuelLoad_Sld"  HorizontalAlignment="Left" TrackSize="150" Height="41" Margin="843,952,0,0" VerticalAlignment="Top" Width="161" Panel.ZIndex="2" Value_init="50"/>
+                <Label x:Name="FuelLoad_Value_lbl" Content="50L" HorizontalAlignment="Left" Margin="1009,951,0,0" VerticalAlignment="Top" FontSize="24" FontFamily="/AC_Configurator_STDL;component/Fonts/#3ds Light" Foreground="White" Panel.ZIndex="2" Width="64"/>
 
                 <!-- ListBox trasparente con ZIndex=2 (ancora più sopra) -->
                 <ListBox x:Name="Track_Selection_lst" Background="Transparent" 
@@ -70,33 +88,25 @@
                          ItemContainerStyle="{StaticResource TransparentListBoxItem}"
                          HorizontalAlignment="Left"
                          VerticalAlignment="Top"
-                         Margin="193,203,0,0"
+                         Margin="76,195,0,0"
                          ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
-                         Width="445"
-                         Panel.ZIndex="2" Height="353">
-                    
-                </ListBox>
+                         Width="450"
+                         Panel.ZIndex="2" Height="307"/>
+
                 <ListBox x:Name="Car_Selection_lst" Background="Transparent" 
                          BorderThickness="0"
                          ItemContainerStyle="{StaticResource TransparentListBoxItem}"
                          Margin="0,183,183,639"
                          ScrollViewer.VerticalScrollBarVisibility="Disabled"
                          ScrollViewer.HorizontalScrollBarVisibility="Disabled"
-                         Panel.ZIndex="2" HorizontalAlignment="Right" Width="430">
-
-
-                </ListBox>
+                         Panel.ZIndex="2" HorizontalAlignment="Right" Width="430"/>
                 <ListBox x:Name="CarSkin_Selection_lst" Background="Transparent" 
                          BorderThickness="0"
                          ItemContainerStyle="{StaticResource TransparentListBoxItem}"
                          Margin="0,546,183,420"
                          ScrollViewer.VerticalScrollBarVisibility="Disabled"
                          ScrollViewer.HorizontalScrollBarVisibility="Disabled"
-                         Panel.ZIndex="2" HorizontalAlignment="Right" Width="430">
-                   
-
-
-                </ListBox>
+                         Panel.ZIndex="2" HorizontalAlignment="Right" Width="430"/>
                 <Image x:Name="Start_btn_img" HorizontalAlignment="Left" Height="240" Margin="843,420,0,0" VerticalAlignment="Top" Width="239" Source="Resources/start_OFF.png" Panel.ZIndex="1" Stretch="Fill" />
             </Grid>
         </Viewbox>

@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="AC_Configurator_STDL.Controls.Custom_Checkbox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AC_Configurator_STDL.Controls"
+             mc:Ignorable="d" Width="227.2">
+    <Grid>
+        <StackPanel Orientation="Horizontal" Background="Transparent">
+            <!-- Il checker: Border con Rectangle interno per intercettare i click -->
+            <Border x:Name="Checker" 
+                Width="20" Height="20"
+                BorderBrush="White" 
+                BorderThickness="2"
+                CornerRadius="3"
+                Cursor="Hand"
+                MouseLeftButtonDown="Checker_Click">
+                <Rectangle x:Name="CheckerFill" 
+                       Fill="White" 
+                       Opacity="0"/>
+            </Border>
+
+            <!-- La label -->
+            <TextBlock x:Name="Label"
+                   Text="Label"
+                   VerticalAlignment="Center"
+                   Margin="8,0,0,0"
+                   FontSize="24" Foreground="White"/>
+        </StackPanel>
+
+    </Grid>
+</UserControl>

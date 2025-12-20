@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_Configurator\App.xaml
-2-1130950049
+4-1140561769
 
-182073891919
+211566218167
 14-1136074773
-Controls\MessageBox_Custom.xaml;Main_GUI.xaml;
+Controls\Custom_Checkbox.xaml;Controls\Custom_Slider.xaml;Controls\MessageBox_Custom.xaml;Main_GUI.xaml;
 
 False
 

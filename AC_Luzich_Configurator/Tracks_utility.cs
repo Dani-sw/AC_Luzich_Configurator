@@ -112,6 +112,7 @@ namespace AC_Configurator_STDL
             // Aggiungi direttamente gli oggetti Tracks alla ListBox
             foreach (var AC_track in AC_Tracks_List)
             {
+                //style nello xaml
                 Tracks_Listbox.Items.Add(AC_track);
             }
 

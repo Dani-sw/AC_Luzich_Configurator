@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/start_off.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/overlay_test.png")]
 
 

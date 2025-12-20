@@ -18,8 +18,6 @@ namespace AC_Configurator_STDL
             try
             {
                 InitializeComponent();
-
-
             }
 
             catch (System.Exception ex)
@@ -37,6 +35,7 @@ namespace AC_Configurator_STDL
             {
 
                 Global_var.GUI_Window = this;
+                GUI_controls.Initilize();
 
                 Preferences.Load();
                 Start_button.initialize();
@@ -107,7 +106,7 @@ namespace AC_Configurator_STDL
             Application.Current.Shutdown();
         }
 
-        // MessageBox.Show(Global_var.AC_CarSkin + " " + Global_var.IP_PC_CLient+"  "+Global_var.AC_Track.Tracks_info.ACname);
+ 
         
     }
 }

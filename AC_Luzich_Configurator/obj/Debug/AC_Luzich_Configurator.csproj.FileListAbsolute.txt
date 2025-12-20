@@ -52,6 +52,11 @@ C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_Configurator\obj\Debug\A
 C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_Configurator\obj\Debug\AC_Configurator_STDL.pdb
 C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_Configurator\obj\Debug\Controls\MessageBox_Custom.g.cs
 C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_Configurator\obj\Debug\Controls\MessageBox_Custom.baml
-C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_Configurator\obj\Debug\AC_Luzich_Configurator.csproj.AssemblyReference.cache
 C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_Configurator\bin\Debug\System\AC_Configurator_STDL_ConfigFile.ini
 C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_Configurator\bin\Debug\System\configurator_parameters.ini
+C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_Configurator\obj\Debug\Controls\Custom_Checkbox.g.cs
+C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_Configurator\obj\Debug\Controls\Custom_Checkbox.baml
+C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_Configurator\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_Configurator\obj\Debug\Controls\Custom_Slider.baml
+C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_Configurator\obj\Debug\Controls\Custom_Slider.g.cs
+C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_Luzich_Configurator\obj\Debug\AC_Luzich_Configurator.csproj.AssemblyReference.cache
