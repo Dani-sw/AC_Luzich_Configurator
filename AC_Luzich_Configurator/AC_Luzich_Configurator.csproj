@@ -74,6 +74,7 @@
     <Compile Include="LogWriter.cs" />
     <Compile Include="Network.cs" />
     <Compile Include="Preferences.cs" />
+    <Compile Include="Race_Condtions.cs" />
     <Compile Include="Start_button.cs" />
     <Compile Include="Tracks.cs" />
     <Compile Include="Tracks_utility.cs" />

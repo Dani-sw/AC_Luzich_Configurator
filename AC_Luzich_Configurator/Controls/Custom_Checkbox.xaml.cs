@@ -17,26 +17,37 @@ namespace AC_Configurator_STDL.Controls
 {
     public partial class Custom_Checkbox  : UserControl
     {
+        public event EventHandler<bool> CheckedClick;
 
         public Custom_Checkbox()
         {
             InitializeComponent();
-            // Imposta il colore iniziale
             Loaded += (s, e) => UpdateVisual();
         }
 
         private bool _isChecked = false;
 
-        // Proprietà IsChecked con aggiornamento visuale
         public bool IsChecked
         {
             get => _isChecked;
             set
             {
-                _isChecked = value;
-                UpdateVisual();
+                if (_isChecked != value)
+                {
+                    _isChecked = value;
+
+                    UpdateVisual();
+                    // Solleva l'evento quando il valore cambia
+                   
+                }
             }
         }
+
+        //mettere questa variabile a false per un normale comportamento del checker
+        // a true non può essere Deselezionato ed è fatto per l'utilizzo di mutua esclusione in modo che non possano essere deselezionati contemporaneamente
+        // ma appunto si vada a false il checker solo se l'altro viene cliccato a true.
+        public bool isDeselectionDisabled { get; set; } = true;
+
 
         // Proprietà accessibili da XAML
         public string LabelText
@@ -102,7 +113,19 @@ namespace AC_Configurator_STDL.Controls
         // Click sul checker
         private void Checker_Click(object sender, MouseButtonEventArgs e)
         {
-            IsChecked = !IsChecked;
+            //mettere questa variabile a false per un normale comportamento del checker
+            // a true non può essere Deselezionato ed è fatto per l'utilizzo di mutua esclusione in modo che non possano essere deselezionati contemporaneamente
+            // ma appunto si vada a false il checker solo se l'altro viene cliccato a true.
+            if (isDeselectionDisabled)
+            {
+                IsChecked = true;
+            }
+            else
+            {
+                IsChecked = !IsChecked;
+            }
+           
+            CheckedClick?.Invoke(this, IsChecked);
         }
 
         // Aggiorna l'aspetto visuale

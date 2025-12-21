@@ -8,22 +8,31 @@ namespace AC_Configurator_STDL
 {
     public static class Configurator_file
     {
+
+
+    
+
         static public void Write_Car_param()
         {
             Global_var.Configurator_Parameters_ini_file.WriteString_v2("RACE", "RACE.MODEL.cfg", Global_var._AC_Cars.ACname);
             Global_var.Configurator_Parameters_ini_file.WriteString_v2("RACE", "CAR_0.SKIN.cfg", Global_var.AC_CarSkin);
-            if (Global_var.GhostCar == "1")
-            {
-                Global_var.Configurator_Parameters_ini_file.WriteString_v2("RACE", "GHOST_CAR.RECORDING.cfg", "1");
-                Global_var.Configurator_Parameters_ini_file.WriteString_v2("RACE", "GHOST_CAR.PLAYING.cfg", "1");
-                Global_var.Configurator_Parameters_ini_file.WriteString_v2("RACE", "GHOST_CAR.LOAD.cfg", "1");
-            }
-            else
-            {
-                Global_var.Configurator_Parameters_ini_file.WriteString_v2("RACE", "GHOST_CAR.RECORDING.cfg", "0");
-                Global_var.Configurator_Parameters_ini_file.WriteString_v2("RACE", "GHOST_CAR.PLAYING.cfg", "0");
-                Global_var.Configurator_Parameters_ini_file.WriteString_v2("RACE", "GHOST_CAR.LOAD.cfg", "0");
-            }
+
+            Global_var.Configurator_Parameters_ini_file.WriteString_v2("ASSISTS", "ASSISTS.TYRE_BLANKETS.cfg", Race_Condtions.Tyre_Cond.ToString());
+            Global_var.Configurator_Parameters_ini_file.WriteString_v2("ASSISTS", "ASSISTS.TYRE_WEAR.cfg", Race_Condtions.Tyre_Wear.ToString());
+            Global_var.Configurator_Parameters_ini_file.WriteString_v2("ASSISTS", "ASSISTS.FUEL_RATE.cfg", Race_Condtions.Fuel_Cons.ToString());
+            Global_var.Configurator_Parameters_ini_file.WriteString_v2("CAR", "FUEL.FUEL.car", Race_Condtions.Fuel_Load.ToString()); //file CAR(car.ini)  e .car nella directory \data dell'autop scelta
+            /* if (Global_var.GhostCar == "1")
+             {
+                 Global_var.Configurator_Parameters_ini_file.WriteString_v2("RACE", "GHOST_CAR.RECORDING.cfg", "1");
+                 Global_var.Configurator_Parameters_ini_file.WriteString_v2("RACE", "GHOST_CAR.PLAYING.cfg", "1");
+                 Global_var.Configurator_Parameters_ini_file.WriteString_v2("RACE", "GHOST_CAR.LOAD.cfg", "1");
+             }
+             else
+             {
+                 Global_var.Configurator_Parameters_ini_file.WriteString_v2("RACE", "GHOST_CAR.RECORDING.cfg", "0");
+                 Global_var.Configurator_Parameters_ini_file.WriteString_v2("RACE", "GHOST_CAR.PLAYING.cfg", "0");
+                 Global_var.Configurator_Parameters_ini_file.WriteString_v2("RACE", "GHOST_CAR.LOAD.cfg", "0");
+             }*/
 
 
 
