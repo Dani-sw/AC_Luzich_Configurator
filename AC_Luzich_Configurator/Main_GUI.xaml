@@ -3,11 +3,19 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:shell="http://schemas.microsoft.com/winfx/2006/xaml/presentation/shell"
         xmlns:local="clr-namespace:AC_Configurator_STDL"
-        xmlns:Controls="clr-namespace:AC_Configurator_STDL.Controls" x:Class="AC_Configurator_STDL.Main_GUI"
+        xmlns:Controls="clr-namespace:AC_Configurator_STDL.Controls" xmlns:shell1="http://schemas.microsoft.com/netfx/2009/xaml/presentation" x:Class="AC_Configurator_STDL.Main_GUI"
         mc:Ignorable="d"
         Title="MainWindow" Height="900" Width="1600"
-        MinWidth="1600" MinHeight="900" Loaded="Window_Loaded" Closed="Window_Closed">
+        MinWidth="1600" MinHeight="900" Loaded="Window_Loaded" Closed="Window_Closed" WindowStyle="None">
+    <WindowChrome.WindowChrome>
+        <shell1:WindowChrome
+        CaptionHeight="0"
+        ResizeBorderThickness="6"
+        GlassFrameThickness="0"
+        CornerRadius="0"/>
+    </WindowChrome.WindowChrome>
     <Window.Resources>
         <!-- Stile per ListBoxItem -->
         <Style x:Key="TransparentListBoxItem" TargetType="{x:Type ListBoxItem}">
@@ -36,11 +44,51 @@
             </Setter>
         </Style>
     </Window.Resources>
+    
     <Window.Background>
         <ImageBrush Stretch="UniformToFill" ImageSource="Resources/background.png"/>
     </Window.Background>
+
     <Grid>
-        <Viewbox Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Stretch">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <!-- TITLEBAR -->
+            <RowDefinition Height="*"/>
+            <!-- CONTENUTO -->
+        </Grid.RowDefinitions>
+
+        <!-- TITLE BAR CUSTOM -->
+        <Grid Grid.Row="0" x:Name="TitleBar_Color"
+          Background="#FF600806"
+          MouseLeftButtonDown="TitleBar_MouseLeftButtonDown">
+
+            <TextBlock Text="AC Configurator v1.0.0.0"
+                   Foreground="White"
+                   VerticalAlignment="Center"
+                   Margin="12,0"
+                   FontFamily="/AC_Configurator_STDL;component/Fonts/#3ds Light"
+                   FontSize="16"/>
+
+            <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Right">
+
+                <Button Content="—"
+                    Width="40"
+                    Click="MinimizeButton_Click" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}"/>
+
+                <Button Content="⬜"
+                    Width="40"
+                    Click="MaximizeButton_Click" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White"/>
+
+                <Button Content="✕"
+                    Width="40"
+                    Click="CloseButton_Click"
+                    Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}"/>
+            </StackPanel>
+        </Grid>
+        
+        <Viewbox Grid.Row="1" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Stretch">
             <Grid Width="1920" Height="1080">
 
                 <!-- Immagine car_preview con ZIndex=0 (sotto) -->
@@ -81,6 +129,21 @@
                 <Label x:Name="FuelLoad_lbl" Content="Fuel Load" HorizontalAlignment="Left" Margin="623,951,0,0" VerticalAlignment="Top" FontSize="24" FontFamily="/AC_Configurator_STDL;component/Fonts/#3ds Light" Foreground="White" Panel.ZIndex="2"/>
                 <Controls:Custom_Slider x:Name="FuelLoad_Sld"  HorizontalAlignment="Left" TrackSize="150" Height="41" Margin="843,952,0,0" VerticalAlignment="Top" Width="161" Panel.ZIndex="2" Value_init="50"/>
                 <Label x:Name="FuelLoad_Value_lbl" Content="50L" HorizontalAlignment="Left" Margin="1009,951,0,0" VerticalAlignment="Top" FontSize="24" FontFamily="/AC_Configurator_STDL;component/Fonts/#3ds Light" Foreground="White" Panel.ZIndex="2" Width="64"/>
+                <Label x:Name="StabiltyCtrl_lbl" Content="Stability" HorizontalAlignment="Left" Margin="1129,825,0,0" VerticalAlignment="Top" FontSize="24" FontFamily="/AC_Configurator_STDL;component/Fonts/#3ds Light" Foreground="White" Panel.ZIndex="2"/>
+                <Controls:Custom_Slider x:Name="StabiltyCtrl_Sld"  HorizontalAlignment="Left" TrackSize="150" Height="41" Margin="1243,826,0,0" VerticalAlignment="Top" Width="161" Panel.ZIndex="2" Value_init="50"/>
+                <Label x:Name="StabiltyCtrl_Value_lbl" Content="50" HorizontalAlignment="Left" Margin="1413,825,0,0" VerticalAlignment="Top" FontSize="24" FontFamily="/AC_Configurator_STDL;component/Fonts/#3ds Light" Foreground="White" Panel.ZIndex="2" Width="64"/>
+                <Label x:Name="IdealLine_lbl" Content="Ideal Line" HorizontalAlignment="Left" Margin="1129,867,0,0" VerticalAlignment="Top" FontSize="24" FontFamily="/AC_Configurator_STDL;component/Fonts/#3ds Light" Foreground="White" Panel.ZIndex="2"/>
+                <Controls:Custom_Checkbox x:Name="IdealLine_ON_chkbox" IsChecked="True" LabelText="On" CheckerSize="29" HorizontalAlignment="Left" Height="33" Margin="1255,872,0,0" VerticalAlignment="Top" Width="104" FontFamily="/AC_Configurator_STDL;component/Fonts/#3ds Light" Panel.ZIndex="2"  />
+                <Controls:Custom_Checkbox x:Name="IdealLine_OFF_chkbox"  LabelText="Off" CheckerSize="29" HorizontalAlignment="Left" Height="33" Margin="1339,872,0,0" IsChecked="False" VerticalAlignment="Top" Width="78" FontFamily="/AC_Configurator_STDL;component/Fonts/#3ds Light"  Panel.ZIndex="2" RenderTransformOrigin="0.5,0.5" >
+                    <Controls:Custom_Checkbox.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleY="-1.034"/>
+                            <RotateTransform/>
+                            <TranslateTransform Y="-0.975"/>
+                        </TransformGroup>
+                    </Controls:Custom_Checkbox.RenderTransform>
+                </Controls:Custom_Checkbox>
 
                 <!-- ListBox trasparente con ZIndex=2 (ancora più sopra) -->
                 <ListBox x:Name="Track_Selection_lst" Background="Transparent" 

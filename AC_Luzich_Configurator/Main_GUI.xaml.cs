@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Input;
-
+using System.Windows.Media;
 
 namespace AC_Configurator_STDL
 {
@@ -18,6 +18,8 @@ namespace AC_Configurator_STDL
             try
             {
                 InitializeComponent();
+                TitleBar_Color.Background = new SolidColorBrush(Color.FromRgb(96,8,6));
+
             }
 
             catch (System.Exception ex)
@@ -45,7 +47,11 @@ namespace AC_Configurator_STDL
 
                 AC_Tracks_Function.Fill_Tracks_Listbox_control(Track_Selection_lst);
                 AC_Cars_Functions.Fill_Cars_Listbox(Car_Selection_lst, CarSkin_Selection_lst);
-                
+
+               
+                //this.BorderBrush = Brushes.Crimson; // o new SolidColorBrush(Colors.Red)
+                //this.BorderThickness = new Thickness(1);
+
 
             }
 
