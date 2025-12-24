@@ -11,8 +11,7 @@ namespace AC_Configurator_STDL
     {
 
         public static void Initilize()
-        {
-            Global_var.GUI_Window.FuelLoad_Sld.ValueChanged += FuelLoad_Sld_ValueChanged;
+        {           
             Global_var.GUI_Window.TyreCond_New_chkbox.CheckedClick += RaceCond_CheckedChanged;
             Global_var.GUI_Window.TyreCond_Used_chkbox.CheckedClick += RaceCond_CheckedChanged;
             Global_var.GUI_Window.TyreWear_ON_chkbox.CheckedClick += RaceCond_CheckedChanged;
@@ -21,6 +20,11 @@ namespace AC_Configurator_STDL
             Global_var.GUI_Window.FuelCons_OFF_chkbox.CheckedClick += RaceCond_CheckedChanged;
             Global_var.GUI_Window.TrackGrip_Race_chkbox.CheckedClick += RaceCond_CheckedChanged;
             Global_var.GUI_Window.TrackGrip_Green_chkbox.CheckedClick += RaceCond_CheckedChanged;
+            Global_var.GUI_Window.IdealLine_ON_chkbox.CheckedClick += RaceCond_CheckedChanged;
+            Global_var.GUI_Window.IdealLine_OFF_chkbox.CheckedClick += RaceCond_CheckedChanged;
+
+            Global_var.GUI_Window.FuelLoad_Sld.ValueChanged += RaceCond_sld_ValueChanged;
+            Global_var.GUI_Window.StabiltyCtrl_Sld.ValueChanged += RaceCond_sld_ValueChanged;
 
             Race_Condtions.Fuel_Load=Convert.ToInt32(Global_var.GUI_Window.FuelLoad_Sld.Value);
 
@@ -35,10 +39,10 @@ namespace AC_Configurator_STDL
 
       
        
-        private static void FuelLoad_Sld_ValueChanged(object sender, double e)
+        private static void RaceCond_sld_ValueChanged(object sender, double e)
         {
 
-            Race_Condtions.Fuel_Load_sld(sender, e);
+            Race_Condtions.Sliders(sender, e);
         }
     }
 }

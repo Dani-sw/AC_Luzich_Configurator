@@ -44,13 +44,13 @@
             </Setter>
         </Style>
     </Window.Resources>
-    
+
     <Window.Background>
         <ImageBrush Stretch="UniformToFill" ImageSource="Resources/background.png"/>
     </Window.Background>
 
     <Grid>
-        
+
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
             <!-- TITLEBAR -->
@@ -87,7 +87,7 @@
                     Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}"/>
             </StackPanel>
         </Grid>
-        
+
         <Viewbox Grid.Row="1" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Stretch">
             <Grid Width="1920" Height="1080">
 
@@ -134,24 +134,16 @@
                 <Label x:Name="StabiltyCtrl_Value_lbl" Content="50" HorizontalAlignment="Left" Margin="1413,825,0,0" VerticalAlignment="Top" FontSize="24" FontFamily="/AC_Configurator_STDL;component/Fonts/#3ds Light" Foreground="White" Panel.ZIndex="2" Width="64"/>
                 <Label x:Name="IdealLine_lbl" Content="Ideal Line" HorizontalAlignment="Left" Margin="1129,867,0,0" VerticalAlignment="Top" FontSize="24" FontFamily="/AC_Configurator_STDL;component/Fonts/#3ds Light" Foreground="White" Panel.ZIndex="2"/>
                 <Controls:Custom_Checkbox x:Name="IdealLine_ON_chkbox" IsChecked="True" LabelText="On" CheckerSize="29" HorizontalAlignment="Left" Height="33" Margin="1255,872,0,0" VerticalAlignment="Top" Width="104" FontFamily="/AC_Configurator_STDL;component/Fonts/#3ds Light" Panel.ZIndex="2"  />
-                <Controls:Custom_Checkbox x:Name="IdealLine_OFF_chkbox"  LabelText="Off" CheckerSize="29" HorizontalAlignment="Left" Height="33" Margin="1339,872,0,0" IsChecked="False" VerticalAlignment="Top" Width="78" FontFamily="/AC_Configurator_STDL;component/Fonts/#3ds Light"  Panel.ZIndex="2" RenderTransformOrigin="0.5,0.5" >
-                    <Controls:Custom_Checkbox.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform AngleY="-1.034"/>
-                            <RotateTransform/>
-                            <TranslateTransform Y="-0.975"/>
-                        </TransformGroup>
-                    </Controls:Custom_Checkbox.RenderTransform>
-                </Controls:Custom_Checkbox>
+                <Controls:Custom_Checkbox x:Name="IdealLine_OFF_chkbox"  LabelText="Off" CheckerSize="29" HorizontalAlignment="Left" Height="33" Margin="1339,872,0,0" IsChecked="False" VerticalAlignment="Top" Width="78" FontFamily="/AC_Configurator_STDL;component/Fonts/#3ds Light"  Panel.ZIndex="2" RenderTransformOrigin="0.5,0.5"/>
 
                 <!-- ListBox trasparente con ZIndex=2 (ancora più sopra) -->
                 <ListBox x:Name="Track_Selection_lst" Background="Transparent" 
                          BorderThickness="0"
                          ItemContainerStyle="{StaticResource TransparentListBoxItem}"
+                         Style="{StaticResource CustomListBoxStyle}"
                          HorizontalAlignment="Left"
                          VerticalAlignment="Top"
-                         Margin="76,195,0,0"
+                         Margin="76,197,0,0"
                          ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
                          Width="450"
                          Panel.ZIndex="2" Height="307"/>
@@ -159,15 +151,17 @@
                 <ListBox x:Name="Car_Selection_lst" Background="Transparent" 
                          BorderThickness="0"
                          ItemContainerStyle="{StaticResource TransparentListBoxItem}"
-                         Margin="0,183,183,639"
-                         ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                          Style="{StaticResource CustomListBoxStyle}"
+                         Margin="0,197,183,597"
+                         ScrollViewer.VerticalScrollBarVisibility="Auto"
                          ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                          Panel.ZIndex="2" HorizontalAlignment="Right" Width="430"/>
                 <ListBox x:Name="CarSkin_Selection_lst" Background="Transparent" 
                          BorderThickness="0"
                          ItemContainerStyle="{StaticResource TransparentListBoxItem}"
+                          Style="{StaticResource CustomListBoxStyle}"
                          Margin="0,546,183,420"
-                         ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                         ScrollViewer.VerticalScrollBarVisibility="Auto"
                          ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                          Panel.ZIndex="2" HorizontalAlignment="Right" Width="430"/>
                 <Image x:Name="Start_btn_img" HorizontalAlignment="Left" Height="240" Margin="843,420,0,0" VerticalAlignment="Top" Width="239" Source="Resources/start_OFF.png" Panel.ZIndex="1" Stretch="Fill" />

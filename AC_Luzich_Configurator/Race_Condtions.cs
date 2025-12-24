@@ -16,6 +16,10 @@ namespace AC_Configurator_STDL
         public static int Track_Grip { get; set; }
         public static int Fuel_Load { get; set; }
 
+        //Assists
+        public static int Stability_Ctrl{ get; set; }
+        public static int Ideal_Line { get; set; }
+
 
 
         public static void checkboxes(object sender , bool e)
@@ -57,17 +61,37 @@ namespace AC_Configurator_STDL
                     Global_var.GUI_Window.TrackGrip_Race_chkbox.IsChecked = false;
                     Track_Grip = 0;
                     break;
+                case "IdealLine_ON_chkbox":
+                    Global_var.GUI_Window.IdealLine_OFF_chkbox.IsChecked = false;
+                    Ideal_Line = 1;
+                    break;
+                case "IdealLine_OFF_chkbox":
+                    Global_var.GUI_Window.IdealLine_ON_chkbox.IsChecked = false;
+                    Ideal_Line = 0;
+                    break;
             }
 
         }
 
-
-        public static void Fuel_Load_sld(object sender,double e)
+        internal static void Sliders(object sender, double e)
         {
-            Fuel_Load = Convert.ToInt32(e);
-            Global_var.GUI_Window.FuelLoad_Value_lbl.Content = Fuel_Load.ToString() + "L";
+            Custom_Slider _slider = sender as Custom_Slider;
+            switch (_slider.Name)
+            {
+                case "FuelLoad_Sld":
+                    Fuel_Load = Convert.ToInt32(e);
+                    Global_var.GUI_Window.FuelLoad_Value_lbl.Content = Fuel_Load.ToString() + "L";
+                    break;
 
+                case "StabiltyCtrl_Sld":                
+                    Stability_Ctrl = Convert.ToInt32(e);
+                    Global_var.GUI_Window.StabiltyCtrl_Value_lbl.Content = Stability_Ctrl.ToString();
+                    break;
+
+            }
         }
+
+        
 
 
     }

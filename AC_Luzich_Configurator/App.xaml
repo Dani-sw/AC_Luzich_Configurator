@@ -4,6 +4,73 @@
              xmlns:local="clr-namespace:WpfApp1"
              StartupUri="Main_GUI.xaml">
     <Application.Resources>
-         
+        <!-- Style per la ScrollBar verticale personalizzata -->
+            <Style x:Key="CustomScrollBarStyle" TargetType="{x:Type ScrollBar}">
+                <Setter Property="Background" Value="#2C2C2C"/>
+                <Setter Property="Width" Value="12"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type ScrollBar}">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+
+                                <!-- Track (sfondo dello slider) -->
+                                <Border Background="{TemplateBinding Background}" 
+                                    CornerRadius="0"/>
+
+                                <!-- Thumb (la parte che si sposta) -->
+                                <Track x:Name="PART_Track" IsDirectionReversed="True">
+                                    <Track.Thumb>
+                                        <Thumb>
+                                            <Thumb.Style>
+                                                <Style TargetType="{x:Type Thumb}">
+                                                    <Setter Property="Background" Value="#4A9EFF"/>
+                                                    <Setter Property="Template">
+                                                        <Setter.Value>
+                                                            <ControlTemplate TargetType="{x:Type Thumb}">
+                                                            <Border Background="{TemplateBinding Background}" 
+                                                                CornerRadius="0"
+                                                                Margin="2"/>
+                                                            </ControlTemplate>
+                                                        </Setter.Value>
+                                                    </Setter>
+                                                    <Style.Triggers>
+                                                        <Trigger Property="IsMouseOver" Value="True">
+                                                            <Setter Property="Background" Value="#5AAFFF"/>
+                                                        </Trigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </Thumb.Style>
+                                        </Thumb>
+                                    </Track.Thumb>
+                                </Track>
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <!-- Style per il ListBox con ScrollBar personalizzata -->
+        <Style x:Key="CustomListBoxStyle" TargetType="{x:Type ListBox}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ListBox}">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                            <ScrollViewer>
+                                <ScrollViewer.Resources>
+                                    <Style TargetType="{x:Type ScrollBar}" 
+                                           BasedOn="{StaticResource CustomScrollBarStyle}"/>
+                                </ScrollViewer.Resources>
+                                <ItemsPresenter/>
+                            </ScrollViewer>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Application.Resources>
 </Application>
