@@ -20,6 +20,9 @@ namespace AC_Configurator_STDL
             Global_var.Configurator_Parameters_ini_file.WriteString_v2("ASSISTS", "ASSISTS.TYRE_BLANKETS.cfg", Race_Condtions.Tyre_Cond.ToString());
             Global_var.Configurator_Parameters_ini_file.WriteString_v2("ASSISTS", "ASSISTS.TYRE_WEAR.cfg", Race_Condtions.Tyre_Wear.ToString());
             Global_var.Configurator_Parameters_ini_file.WriteString_v2("ASSISTS", "ASSISTS.FUEL_RATE.cfg", Race_Condtions.Fuel_Cons.ToString());
+            Global_var.Configurator_Parameters_ini_file.WriteString_v2("ASSISTS", "ASSISTS.FUEL_RATE.cfg", Race_Condtions.Fuel_Cons.ToString());
+            Global_var.Configurator_Parameters_ini_file.WriteString_v2("ASSISTS", "ASSISTS.STABILITY_CONTROL.cfg", Race_Condtions.Stability_Ctrl.ToString());
+            Global_var.Configurator_Parameters_ini_file.WriteString_v2("ASSISTS", "ASSISTS.IDEAL_LINE.cfg", Race_Condtions.Ideal_Line.ToString());
             Global_var.Configurator_Parameters_ini_file.WriteString_v2("CAR", "FUEL.FUEL.car", Race_Condtions.Fuel_Load.ToString()); //file CAR(car.ini)  e .car nella directory \data dell'autop scelta
             /* if (Global_var.GhostCar == "1")
              {
@@ -73,6 +76,26 @@ namespace AC_Configurator_STDL
                 Global_var.Configurator_Parameters_ini_file.WriteString_v2("RACE", "SESSION_0.TYPE.cfg", "1");
                 Global_var.Configurator_Parameters_ini_file.WriteString_v2("RACE", "SESSION_0.DURATION_MINUTES.cfg", "0");
                 Global_var.Configurator_Parameters_ini_file.WriteString_v2("RACE", "SESSION_0.SPAWN_SET.cfg", "PIT");
+            }
+
+            if (Race_Condtions.Track_Grip == 1)
+            {
+                //optimum
+                Global_var.Configurator_Parameters_ini_file.WriteString_v2("RACE", "DYNAMIC_TRACK.LAP_GAIN.cfg", "1");
+                Global_var.Configurator_Parameters_ini_file.WriteString_v2("RACE", "DYNAMIC_TRACK.PRESET.cfg", "5");
+                Global_var.Configurator_Parameters_ini_file.WriteString_v2("RACE", "DYNAMIC_TRACK.RANDOMNESS.cfg", "0");
+                Global_var.Configurator_Parameters_ini_file.WriteString_v2("RACE", "DYNAMIC_TRACK.SESSION_START.cfg", "100");
+                Global_var.Configurator_Parameters_ini_file.WriteString_v2("RACE", "DYNAMIC_TRACK.SESSION_TRANSFER.cfg", "100");
+            }
+            else
+            {
+                //Green
+                Global_var.Configurator_Parameters_ini_file.WriteString_v2("RACE", "DYNAMIC_TRACK.LAP_GAIN.cfg", "132");
+                Global_var.Configurator_Parameters_ini_file.WriteString_v2("RACE", "DYNAMIC_TRACK.PRESET.cfg", "3");
+                Global_var.Configurator_Parameters_ini_file.WriteString_v2("RACE", "DYNAMIC_TRACK.RANDOMNESS.cfg", "2");
+                Global_var.Configurator_Parameters_ini_file.WriteString_v2("RACE", "DYNAMIC_TRACK.SESSION_START.cfg", "95");
+                Global_var.Configurator_Parameters_ini_file.WriteString_v2("RACE", "DYNAMIC_TRACK.SESSION_TRANSFER.cfg", "90");
+
             }
 
 

@@ -22,11 +22,10 @@ namespace AC_Configurator_STDL
 
 
 
-        public static void checkboxes(object sender , bool e)
+        public static void Checkboxes(object sender , bool e)
         {
             Custom_Checkbox RaceCond_chkbox = sender as Custom_Checkbox;
 
-            //RaceCond_chkbox.isDeselectionDisabled = true;
             switch (RaceCond_chkbox.Name)
             {
                 case "TyreCond_New_chkbox":

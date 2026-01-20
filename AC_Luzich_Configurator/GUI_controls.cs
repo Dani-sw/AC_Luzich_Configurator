@@ -33,7 +33,7 @@ namespace AC_Configurator_STDL
 
         private static void RaceCond_CheckedChanged(object sender, bool e)
         {
-            Race_Condtions.checkboxes(sender, e);
+            Race_Condtions.Checkboxes(sender, e);
 
         }
 

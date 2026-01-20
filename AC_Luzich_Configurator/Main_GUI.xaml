@@ -63,7 +63,7 @@
           Background="#FF600806"
           MouseLeftButtonDown="TitleBar_MouseLeftButtonDown">
 
-            <TextBlock Text="AC Configurator v1.0.0.0"
+            <TextBlock x:Name="TitleBar_NameApp" Text="AC Configurator v1.0.0.0"
                    Foreground="White"
                    VerticalAlignment="Center"
                    Margin="12,0"
@@ -135,7 +135,7 @@
                 <Label x:Name="IdealLine_lbl" Content="Ideal Line" HorizontalAlignment="Left" Margin="1129,867,0,0" VerticalAlignment="Top" FontSize="24" FontFamily="/AC_Configurator_STDL;component/Fonts/#3ds Light" Foreground="White" Panel.ZIndex="2"/>
                 <Controls:Custom_Checkbox x:Name="IdealLine_ON_chkbox" IsChecked="True" LabelText="On" CheckerSize="29" HorizontalAlignment="Left" Height="33" Margin="1255,872,0,0" VerticalAlignment="Top" Width="104" FontFamily="/AC_Configurator_STDL;component/Fonts/#3ds Light" Panel.ZIndex="2"  />
                 <Controls:Custom_Checkbox x:Name="IdealLine_OFF_chkbox"  LabelText="Off" CheckerSize="29" HorizontalAlignment="Left" Height="33" Margin="1339,872,0,0" IsChecked="False" VerticalAlignment="Top" Width="78" FontFamily="/AC_Configurator_STDL;component/Fonts/#3ds Light"  Panel.ZIndex="2" RenderTransformOrigin="0.5,0.5"/>
-
+                <Button x:Name="SaveSetup_btn" Content="Save" HorizontalAlignment="Left" Margin="1255,961,0,0" VerticalAlignment="Top" Width="90" Panel.ZIndex="2" Height="26" Background="{x:Null}" Foreground="White" FontFamily="/AC_Configurator_STDL;component/Fonts/#3ds Light" FontSize="18" Click="SaveSetup_btn_Click"/>
                 <!-- ListBox trasparente con ZIndex=2 (ancora più sopra) -->
                 <ListBox x:Name="Track_Selection_lst" Background="Transparent" 
                          BorderThickness="0"
@@ -165,6 +165,7 @@
                          ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                          Panel.ZIndex="2" HorizontalAlignment="Right" Width="430"/>
                 <Image x:Name="Start_btn_img" HorizontalAlignment="Left" Height="240" Margin="843,420,0,0" VerticalAlignment="Top" Width="239" Source="Resources/start_OFF.png" Panel.ZIndex="1" Stretch="Fill" />
+
             </Grid>
         </Viewbox>
     </Grid>

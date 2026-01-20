@@ -43,6 +43,32 @@ namespace AC_Configurator_STDL.Controls
             }
         }
 
+        private int _triggerValue = -1;
+
+        public int TriggerCheckedClick
+        {
+            get => _triggerValue;
+            set
+            {
+                _triggerValue = value;
+
+                // Scatena l'evento quando viene settato a 0 o 1
+                if (value == 0 || value == 1)
+                {
+                    bool newState = value == 1;
+
+                    // Aggiorna lo stato se necessario
+                    if (IsChecked != newState)
+                    {
+                        IsChecked = newState;
+                    }
+
+                    // Scatena l'evento CheckedClick
+                    CheckedClick?.Invoke(this, newState);
+                }
+            }
+        }
+
         //mettere questa variabile a false per un normale comportamento del checker
         // a true non può essere Deselezionato ed è fatto per l'utilizzo di mutua esclusione in modo che non possano essere deselezionati contemporaneamente
         // ma appunto si vada a false il checker solo se l'altro viene cliccato a true.

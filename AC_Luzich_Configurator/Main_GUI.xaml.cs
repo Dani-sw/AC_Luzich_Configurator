@@ -1,6 +1,8 @@
 ﻿using AC_Configurator_STDL.Controls;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
+using System.Threading;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
@@ -35,12 +37,20 @@ namespace AC_Configurator_STDL
         {
             try
             {
+                //Culture
+                CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("en-US");
+                CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("en-US");
+                CultureInfo customCulture = (CultureInfo)Thread.CurrentThread.CurrentCulture.Clone();
+                customCulture.NumberFormat.NumberDecimalSeparator = "."; //important! set dot for decimal instead of comma
+                Thread.CurrentThread.CurrentCulture = customCulture;
 
                 Global_var.GUI_Window = this;
                 GUI_controls.Initilize();
 
+                TitleBar_NameApp.Text = Version.set();
+
                 Preferences.Load();
-                Start_button.initialize();
+                Start_button.Set();
 
                 List<Tracks> AC_Tracks_List = AC_Tracks_Function.Fill_AC_Tracks_List();
                 List<Cars> AC_Cars_List = AC_Cars_Functions.Fill_AC_Car_List();
@@ -112,7 +122,9 @@ namespace AC_Configurator_STDL
             Application.Current.Shutdown();
         }
 
- 
-        
+        private void SaveSetup_btn_Click(object sender, RoutedEventArgs e)
+        {
+            Preferences.Save_RaceCondition();
+        }
     }
 }

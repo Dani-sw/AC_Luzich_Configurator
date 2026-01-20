@@ -10,7 +10,7 @@ namespace AC_Configurator_STDL
 {
     public static class Network
     {
-        //TODO aggiungere logwriter e messagebox custom
+      
         public static void Copy_Files()
         {
             try

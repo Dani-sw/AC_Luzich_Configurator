@@ -80,6 +80,7 @@
     <Compile Include="Tracks_utility.cs" />
     <Compile Include="Utility.cs" />
     <Compile Include="Configurator_file.cs" />
+    <Compile Include="Version.cs" />
     <Page Include="Controls\Custom_Checkbox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

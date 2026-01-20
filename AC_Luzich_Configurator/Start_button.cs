@@ -12,7 +12,7 @@ namespace AC_Configurator_STDL
     public static class Start_button
     {
 
-        public static void initialize()
+        public static void Set()
         {
             Global_var.GUI_Window.Start_btn_rect.MouseEnter += Start_btn_MouseEnter;
             Global_var.GUI_Window.Start_btn_rect.MouseLeave += Start_btn_MouseLeave;
