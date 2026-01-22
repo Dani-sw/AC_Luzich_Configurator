@@ -21,6 +21,7 @@ namespace AC_Configurator_STDL
             {
                 InitializeComponent();
                 TitleBar_Color.Background = new SolidColorBrush(Color.FromRgb(96,8,6));
+                WindowState = WindowState.Maximized;
 
             }
 
@@ -37,12 +38,7 @@ namespace AC_Configurator_STDL
         {
             try
             {
-                //Culture
-                CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("en-US");
-                CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("en-US");
-                CultureInfo customCulture = (CultureInfo)Thread.CurrentThread.CurrentCulture.Clone();
-                customCulture.NumberFormat.NumberDecimalSeparator = "."; //important! set dot for decimal instead of comma
-                Thread.CurrentThread.CurrentCulture = customCulture;
+                Culture.Set();
 
                 Global_var.GUI_Window = this;
                 GUI_controls.Initilize();

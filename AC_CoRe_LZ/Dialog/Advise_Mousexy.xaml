@@ -1,0 +1,13 @@
+﻿<Controls:MetroWindow x:Class="AC_CoRe.Dialog.Advise_Mousexy"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AC_CoRe.Dialog"
+        mc:Ignorable="d"
+        Title="Mousexy setting" Height="233.412" Width="479.2" Background="#FF252525" WindowStyle="None" ResizeMode="NoResize" Topmost="True" ShowTitleBar="False" WindowStartupLocation="CenterScreen" Closed="Advise_Mousexy_Closed">
+    <Grid VerticalAlignment="Center" >
+        <TextBlock x:Name="advise_txtblk" HorizontalAlignment="Center" Height="134"  TextWrapping="Wrap" VerticalAlignment="Center" Foreground="White" FontFamily="/AC_CoRe;component/fonts/#3ds Light" Margin="12,0,0.2,0.4" Width="467" LineHeight="24" ><Run Text="     "/><Run Text="INSTRUCTION TO SET ESC COORDINATE(Don't use right mouse button "/><Run Text="from"/><Run Text=" now):"/><LineBreak/><Run Text="1)Close this window"/><LineBreak/><Run Text="2"/><Run Text=")Start AC"/><LineBreak/><Run Text="3"/><Run Text=")when you are in pit with car press ESC button on your keyboard&quot;"/><Run Text="              "/><LineBreak/><Run Text="4"/><Run Text=") Put your mouse on ESC label and PRESS RIGHT MOUSE BUTTON"/><LineBreak/><Run Text="5)"/><Run Text="Wait for AC exit and restart all"/><Run Text="."/></TextBlock>
+    </Grid>
+</Controls:MetroWindow>

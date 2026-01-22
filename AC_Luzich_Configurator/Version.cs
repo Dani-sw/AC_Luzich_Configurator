@@ -16,9 +16,9 @@ namespace AC_Configurator_STDL
 {
     public static class Version
     {
-        static private string _sw_version = "0.0.9.1";  //Number of version Here!
-        static private string _sw_title = "AC Configurator";
-        //static private string _sw_title_server = "Puma CoRe Server ";
+        static private string _sw_version = "0.9.0.0";  //Number of version Here!
+        static private string _sw_title = "AC Configurator LZ";
+
 
 
         public static string set()

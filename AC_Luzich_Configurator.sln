@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.36422.26
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AC_Luzich_Configurator", "AC_Luzich_Configurator\AC_Luzich_Configurator.csproj", "{F9CA9934-45DA-45B7-B3B1-B5E92ADE66A2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AC_CoRe_LZ", "AC_CoRe_LZ\AC_CoRe_LZ.csproj", "{6EDDE400-7EF2-497E-8675-2B77A72F277E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssettoCorsaSharedMemory", "AC_SharedMem\AssettoCorsaSharedMemory.csproj", "{020AF3ED-0A4C-4215-9B1D-1D41DD26F8BB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{F9CA9934-45DA-45B7-B3B1-B5E92ADE66A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9CA9934-45DA-45B7-B3B1-B5E92ADE66A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9CA9934-45DA-45B7-B3B1-B5E92ADE66A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EDDE400-7EF2-497E-8675-2B77A72F277E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EDDE400-7EF2-497E-8675-2B77A72F277E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EDDE400-7EF2-497E-8675-2B77A72F277E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EDDE400-7EF2-497E-8675-2B77A72F277E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{020AF3ED-0A4C-4215-9B1D-1D41DD26F8BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{020AF3ED-0A4C-4215-9B1D-1D41DD26F8BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{020AF3ED-0A4C-4215-9B1D-1D41DD26F8BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{020AF3ED-0A4C-4215-9B1D-1D41DD26F8BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

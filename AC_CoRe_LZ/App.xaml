@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns:local="clr-namespace:AC_CoRe" StartupUri="Ac_CoRe_GUI.xaml" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- MahApps.Metro resource dictionaries. Make sure that all file names are Case Sensitive! -->
+
+                <!-- NEW THEMESSTYLE DECLARATION FROM MAHAPPS 2.0 -->
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Themes/Dark.Crimson.xaml" />
+
+
+                <!--<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.AnimatedTabControl.xaml" />-->
+
+                <!-- Possible styles
+                
+                “Red”, “Green”, “Blue”, “Purple”, “Orange”, “Lime”, “Emerald”, “Teal”, “Cyan”, “Cobalt”, “Indigo”, “Violet”, “Pink”, “Magenta”, “Crimson”,
+                “Amber”, “Yellow”, “Brown”, “Olive”, “Steel”, “Mauve”, “Taupe”, “Sienna”
+                
+                -->
+            </ResourceDictionary.MergedDictionaries>
+
+            <Style p5:Key="Anita" xmlns:p5="http://schemas.microsoft.com/winfx/2006/xaml">
+                <Setter Property="TextElement.FontFamily" Value="Resources/#Anita  Semi-square" />
+            </Style>
+
+        </ResourceDictionary>
+
+    </Application.Resources>
+</Application>

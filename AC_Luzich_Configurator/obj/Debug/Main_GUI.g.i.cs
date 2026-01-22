@@ -309,7 +309,7 @@ namespace AC_Configurator_STDL {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/AC_Configurator_STDL;component/main_gui.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/AC_Configurator_LZ;component/main_gui.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\Main_GUI.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

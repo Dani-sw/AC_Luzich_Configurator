@@ -16,7 +16,7 @@ namespace AC_Configurator_STDL
 
         public static string App_path = AppDomain.CurrentDomain.BaseDirectory;
         public static string logs_path = @"Logs\\";
-        public static IniFile ConfigFile = new IniFile(@"System\\AC_Configurator_STDL_ConfigFile.ini");
+        public static IniFile ConfigFile = new IniFile(@"System\\AC_Configurator_LZ.ini");
         public static IniFile Configurator_Parameters_ini_file = new IniFile(@"System\\configurator_parameters.ini");
 
 

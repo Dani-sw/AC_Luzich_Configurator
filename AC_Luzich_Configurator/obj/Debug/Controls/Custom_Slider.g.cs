@@ -83,7 +83,7 @@ namespace AC_Configurator_STDL.Controls {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/AC_Configurator_STDL;component/controls/custom_slider.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/AC_Configurator_LZ;component/controls/custom_slider.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Controls\Custom_Slider.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
