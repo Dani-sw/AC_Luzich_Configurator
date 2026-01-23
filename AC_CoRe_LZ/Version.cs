@@ -16,7 +16,7 @@ namespace AC_CoRe
 
     static class Version
     {
-        static private string _sw_version = "1.0.0.0"; //Number of version Here!
+        static private string _sw_version = "1.0.0.1"; //Number of version Here!
         static private string _sw_title = "AC CoRe LZ ";
 
         static public string sw_version()

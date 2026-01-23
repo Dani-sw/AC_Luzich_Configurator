@@ -36,6 +36,7 @@ namespace AC_CoRe
                 Global_var.ESC_METHOD_MOUSEX = Convert.ToInt32(Global_var.configfile.ReadString_v3("ESC_MOUSE_XY", "ESC_MOUSE_X"));
                 Global_var.ESC_METHOD_MOUSEY = Convert.ToInt32(Global_var.configfile.ReadString_v3("ESC_MOUSE_XY", "ESC_MOUSE_Y"));
 
+                Global_var.BBox_Enable = Global_var.configfile.ReadString_v3("BBOX", "ENABLE");
                 Global_var.BBox_StartBtn_index = Global_var.configfile.ReadString_v3("BBOX", "START_BTN_INDEX");
                 Global_var.BBox_StopBtn_index = Global_var.configfile.ReadString_v3("BBOX", "STOP_BTN_INDEX");
 

@@ -18,10 +18,11 @@ namespace AC_CoRe
         public static string logs_path = @"Logs\\";
 
         //BBOX
+        static public string BBox_Enable = "1";
         static public string BBox_StartBtn_index = "1";
         static public string BBox_StopBtn_index = "1";
 
-        //static public Tracks_Functions AC_Track = new Tracks_Functions();
+
 
         static public int MonitorON = 1;
         static public string AC_cfg_Path = "";

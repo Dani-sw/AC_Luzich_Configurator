@@ -33,8 +33,16 @@ namespace AC_CoRe
             var joystickGuid = Guid.Empty;
 
             //HACK potrebbe interferire con altri joystic , assegnare un guid personalizzato o basta il .supplemental
-            foreach (var deviceInstance in directInput.GetDevices(DeviceType.Gamepad, DeviceEnumerationFlags.AllDevices))
-                joystickGuid = deviceInstance.InstanceGuid;
+            if (Global_var.BBox_Enable == "1")
+            {
+                foreach (var deviceInstance in directInput.GetDevices(DeviceType.Supplemental, DeviceEnumerationFlags.AllDevices))
+                    joystickGuid = deviceInstance.InstanceGuid;
+            }
+            else
+            {
+                foreach (var deviceInstance in directInput.GetDevices(DeviceType.Gamepad, DeviceEnumerationFlags.AllDevices))
+                    joystickGuid = deviceInstance.InstanceGuid;
+            }
 
             
             if (joystickGuid == Guid.Empty)
