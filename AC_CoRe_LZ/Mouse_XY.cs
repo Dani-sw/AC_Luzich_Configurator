@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AC_CoRe.Dialog;
-using System.Windows;
+﻿using AC_CoRe.Dialog;
 using System.Windows.Forms;
-using ExpressionDark;
 
 namespace AC_CoRe
 {
@@ -38,9 +31,12 @@ namespace AC_CoRe
                 Global_var.configfile.WriteString_v2("ESC_MOUSE_XY", "ESC_MOUSE_X", e.X.ToString());
                 Global_var.configfile.WriteString_v2("ESC_MOUSE_XY", "ESC_MOUSE_Y", e.Y.ToString());
 
-                DarkMessageBox.Show("XY coordinates are been setted: RESTART AC CORE PLEASE!", "Coordinate Acquired",DarkMessageBox.Buttons.OK, DarkMessageBox.Icon.Info);
+                //DarkMessageBox.Show("XY coordinates are been setted: RESTART AC CORE PLEASE!", "Coordinate Acquired",DarkMessageBox.Buttons.OK, DarkMessageBox.Icon.Info);
+                MessageBox_Custom.Show("XY coordinates are been setted: RESTART AC CORE PLEASE!", "Coordinate Acquired", MessageBox_Custom.MessageType.Error);
+                
 
-               
+
+
             }
         }
 

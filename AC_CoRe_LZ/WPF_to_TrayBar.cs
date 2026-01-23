@@ -22,17 +22,19 @@ namespace AC_CoRe
         static public void inizialize()
         {
             ni.BalloonTipText = "The app has been minimised. Click the tray icon to show.";
-            ni.BalloonTipTitle = "AC CoReLZ " + Version.sw_version();
+            ni.BalloonTipTitle = Version.set();
             ni.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             ni.Text = "AC CoRe LZ " + Version.sw_version(); ;
-            ni.Icon = new Icon(Application.GetResourceStream(new Uri("pack://application:,,,/Resources/AC_CoRe_icon.ico")).Stream);
+            ni.Icon = new Icon(Application.GetResourceStream(new Uri("pack://application:,,,/Resources/AC_CoRe_LZ_Tray.ico")).Stream);
             ni.Click += ni_Click;
 
             Global_var._AC_Core_GUI.Closed += _AC_Core_GUI_Closed;
             Global_var._AC_Core_GUI.StateChanged += _AC_Core_GUI_StateChanged;
 
             Global_var._AC_Core_GUI.Hide();
+            
             ni.Visible = true;
+            ni.ShowBalloonTip(1000); //deprecated the OS control this(W7 or W10)
         }
 
         public static void open_GUI()

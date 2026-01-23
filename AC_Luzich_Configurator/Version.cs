@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-[assembly: AssemblyTitle("AC_Configurator_STDL")]
+[assembly: AssemblyTitle("AC_Configurator_LZ")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Mach1ne C0de")]
@@ -8,15 +8,15 @@
 [assembly: AssemblyCopyright("Copyright © 2026")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: AssemblyVersion("0.0.9.0")]
-[assembly: AssemblyFileVersion("0.0.9.0")]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]
 
 
 namespace AC_Configurator_STDL
 {
     public static class Version
     {
-        static private string _sw_version = "0.9.0.0";  //Number of version Here!
+        static private string _sw_version = "1.0.0.0";  //Number of version Here!
         static private string _sw_title = "AC Configurator LZ";
 
 

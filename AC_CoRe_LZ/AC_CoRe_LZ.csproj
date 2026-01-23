@@ -36,7 +36,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Resources\AC_CoRe_icon.ico</ApplicationIcon>
+    <ApplicationIcon>Ac_CoRe_LZ_Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ControlzEx, Version=4.0.0.0, Culture=neutral, PublicKeyToken=69f1c32f803d307e, processorArchitecture=MSIL">
@@ -88,7 +88,6 @@
     </ApplicationDefinition>
     <Compile Include="Actions.cs" />
     <Compile Include="AC_ESC.cs" />
-    <Compile Include="App_Messages.cs" />
     <Compile Include="BBox.cs" />
     <Compile Include="BBox_GUI.cs" />
     <Compile Include="CockpitButton.cs" />
@@ -96,12 +95,16 @@
     <Compile Include="Dialog\Advise_Mousexy.xaml.cs">
       <DependentUpon>Advise_Mousexy.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Dialog\MessageBox_Custom.xaml.cs">
+      <DependentUpon>MessageBox_Custom.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Dialog\PushButton_Alert.xaml.cs">
       <DependentUpon>PushButton_Alert.xaml</DependentUpon>
     </Compile>
     <Compile Include="FocusON.cs" />
     <Compile Include="Gameinput_helper.cs" />
     <Compile Include="IniFile.cs" />
+    <Compile Include="LogWriter.cs" />
     <Compile Include="Mouse_XY.cs" />
     <Compile Include="UserActivityHook.cs" />
     <Compile Include="utility.cs" />
@@ -123,15 +126,16 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Dialog\MessageBox_Custom.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Dialog\PushButton_Alert.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExpressionDarkTheme\DarkMessageBox.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Global_var.cs" />
     <Compile Include="Preferences.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -174,9 +178,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\AC_CoRe_icon.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\btn_start_ON.png" />
   </ItemGroup>
   <ItemGroup>
@@ -185,7 +186,16 @@
   <ItemGroup>
     <Resource Include="Resources\bbox_layout.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ac_CoRe_LZ_Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\AC_CoRe_LZ_Tray.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>if not exist "$(TargetDir)Logs" mkdir "$(TargetDir)Logs"</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

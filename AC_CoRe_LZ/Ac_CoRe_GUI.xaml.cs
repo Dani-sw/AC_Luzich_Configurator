@@ -1,26 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using AC_CoRe.Dialog;
 using MahApps.Metro.Controls;
-using System.Globalization;
-using System.Threading;
+using System;
 using System.IO;
-using System.Runtime.InteropServices;
-using ExpressionDark;
-using System.Drawing;
-using AC_CoRe.Dialog;
-using System.Windows.Forms;
+using System.Windows;
 
 namespace AC_CoRe
 {
@@ -52,6 +34,7 @@ namespace AC_CoRe
         {
 
             Culture.set();
+            Utility.Check_dblInstance();
 
             Global_var._AC_Core_GUI = this;
             Title = Version.set();
@@ -72,9 +55,11 @@ namespace AC_CoRe
             {
                 watcher.Path = Global_var.AC_cfg_Path;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                DarkMessageBox.Show("Incorrect Assetto Corsa Documents path\n", "Error", DarkMessageBox.Buttons.OK,DarkMessageBox.Icon.Error);
+                //DarkMessageBox.Show("Incorrect Assetto Corsa Documents path\n", "Error", DarkMessageBox.Buttons.OK,DarkMessageBox.Icon.Error);
+                MessageBox_Custom.Show(ex.Message, "Watcher(): Incorrect Assetto Corsa Documents path", MessageBox_Custom.MessageType.Error);
+                LogWriter.Error_Trace(ex);
                 this.Close();
 
             }

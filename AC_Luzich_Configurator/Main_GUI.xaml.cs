@@ -40,6 +40,8 @@ namespace AC_Configurator_STDL
             {
                 Culture.Set();
 
+                Utility.Check_dblInstance();
+
                 Global_var.GUI_Window = this;
                 GUI_controls.Initilize();
 

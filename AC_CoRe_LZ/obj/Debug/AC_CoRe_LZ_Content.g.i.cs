@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/bbox_layout.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/ac_core_lz_tray.ico")]
 
 

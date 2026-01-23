@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ExpressionDark;
+﻿using AC_CoRe.Dialog;
 using Ini.Net;
+using System;
 
 namespace AC_CoRe
 {
@@ -59,8 +55,10 @@ namespace AC_CoRe
             }
             catch (Exception ex)
             {
-                DarkMessageBox.Show("Preference Load Issue: "+ex.Message,"Error",DarkMessageBox.Buttons.OK,DarkMessageBox.Icon.Error);
-                
+                //DarkMessageBox.Show("Preference Load Issue: "+ex.Message,"Error",DarkMessageBox.Buttons.OK,DarkMessageBox.Icon.Error);
+                MessageBox_Custom.Show(ex.Message, "Preference Load Issue", MessageBox_Custom.MessageType.Error);
+                LogWriter.Error_Trace(ex);
+
             }
             
         }

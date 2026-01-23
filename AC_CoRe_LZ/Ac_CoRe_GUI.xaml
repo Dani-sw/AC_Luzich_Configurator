@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:AC_CoRe"
         xmlns:System="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
-        Title="AC CoRe v0.0.0.1" Width="318.088" Height="554.5"   TitleCharacterCasing="Normal" Loaded="AC_CoRe_GUI_Loaded" Closed="AC_CoRe_GUI_Closed" ShowMaxRestoreButton="False" Icon="Resources/AC_CoRe_icon.ico"  FontFamily="/AC_CoRe;component/fonts/#3ds Light" WindowState="Minimized" ResizeMode="CanMinimize" >
+        Title="AC CoRe v0.0.0.1" Width="318.088" Height="554.5"   TitleCharacterCasing="Normal" Loaded="AC_CoRe_GUI_Loaded" Closed="AC_CoRe_GUI_Closed" ShowMaxRestoreButton="False" Icon="Resources/AC_CoRe_LZ_Tray.ico"  FontFamily="/AC_CoRe;component/fonts/#3ds Light" WindowState="Minimized" ResizeMode="CanMinimize" >
 
     <Grid Background="#FF252526" >
         <TabControl x:Name="tabControl_main" Margin="0,0,0,46.6">
@@ -45,7 +45,7 @@
                             <Rectangle x:Name="bbox_Master_4_rect" RadiusX="50" RadiusY="50" ToolTip="click to select" StrokeThickness="5" HorizontalAlignment="Left" Height="30" Margin="133,39,0,0" Stroke="#FF000CFF" VerticalAlignment="Top" Width="30" Cursor="Hand" Fill="#00000000" />
                             <Rectangle x:Name="bbox_Marshall_13_rect" RadiusX="50" RadiusY="50" ToolTip="click to select" StrokeThickness="5" HorizontalAlignment="Left" Height="30" Margin="176,39,0,0" Stroke="#FF000CFF" VerticalAlignment="Top" Width="30" Cursor="Hand" Fill="#00000000" />
                             <Rectangle x:Name="bbox_2F_1_rect" RadiusX="50" RadiusY="50" ToolTip="click to select" StrokeThickness="5" HorizontalAlignment="Left" Height="30" Margin="218,38,0,0" Stroke="#FF000CFF" VerticalAlignment="Top" Width="30" Cursor="Hand" Fill="#00000000" />
-                            <Rectangle x:Name="bbox_Fire_15_rect" RadiusX="50" RadiusY="50" ToolTip="click to select" StrokeThickness="5" HorizontalAlignment="Left" Height="30" Margin="39,24,0,0" Stroke="#FF000CFF" VerticalAlignment="Top" Width="30" Cursor="Hand" Fill="#00000000" />
+                            <Rectangle x:Name="bbox_Fire_15_rect" RadiusX="50" RadiusY="50" ToolTip="click to select" StrokeThickness="5" HorizontalAlignment="Left" Height="30" Margin="41,24,0,0" Stroke="#FF000CFF" VerticalAlignment="Top" Width="30" Cursor="Hand" Fill="#00000000" />
                             <Rectangle x:Name="bbox_Std_12_rect" RadiusX="50" RadiusY="50" ToolTip="click to select" StrokeThickness="5" HorizontalAlignment="Left" Height="30" Margin="93,148,0,0" Stroke="#FF000CFF" VerticalAlignment="Top" Width="30" Cursor="Hand" Fill="#00000000" />
                             <Rectangle x:Name="bbox_24h_2_rect" RadiusX="50" RadiusY="50" ToolTip="click to select" StrokeThickness="5" HorizontalAlignment="Left" Height="30" Margin="136,148,0,0" Stroke="#FF000CFF" VerticalAlignment="Top" Width="30" Cursor="Hand" Fill="#00000000" />
                             <Rectangle x:Name="bbox_Cockpit_3_rect" RadiusX="50" RadiusY="50" ToolTip="click to select" StrokeThickness="5" HorizontalAlignment="Left" Height="30" Margin="180,148,0,0" Stroke="#FF000CFF" VerticalAlignment="Top" Width="30" Cursor="Hand" Fill="#00000000" />

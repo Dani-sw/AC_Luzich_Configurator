@@ -1,12 +1,9 @@
-﻿using ExpressionDark;
+﻿using AC_CoRe.Dialog;
 using Ini.Net;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Threading;
 
 namespace AC_CoRe
@@ -99,7 +96,7 @@ namespace AC_CoRe
 
                 Global_var.File_And_Path.Clear();
 
-                // DarkMessageBox.Show(ac_carname);
+                
 
                 foreach (string sectionname in Global_var.SectionNames)
                 {
@@ -131,7 +128,9 @@ namespace AC_CoRe
                         }
                         catch (Exception ex)
                         {
-                            DarkMessageBox.Show("configurator parameters writing issue: " + ex.Message);
+                            //DarkMessageBox.Show("configurator parameters writing issue: " + ex.Message);
+                            MessageBox_Custom.Show(ex.Message, "ActionFile Error: Configurator Parameters writing issue", MessageBox_Custom.MessageType.Error);
+                            LogWriter.Error_Trace(ex);
                             throw;
                         }
 
@@ -149,36 +148,11 @@ namespace AC_CoRe
             catch (Exception ex)
             {
 
-                DarkMessageBox.Show(ex.Message, "ActionFile Error", DarkMessageBox.Buttons.OK, DarkMessageBox.Icon.Error);
+                //DarkMessageBox.Show(ex.Message, "ActionFile Error", DarkMessageBox.Buttons.OK, DarkMessageBox.Icon.Error);
+                MessageBox_Custom.Show(ex.Message, "ActionFile Error", MessageBox_Custom.MessageType.Error);
+                LogWriter.Error_Trace(ex);
             }
         }
-
-
-        /*public static void Start_Screen_Hide(MainWindow wpf_windows)
-        {
-            Dispatcher.CurrentDispatcher.BeginInvoke(new Action(() => { wpf_windows.Hide(); }), DispatcherPriority.ContextIdle);
-        }
-
-        public static void Start_Screen_Show(MainWindow wpf_windows)
-        {
-            Dispatcher.CurrentDispatcher.BeginInvoke(new Action(() => { wpf_windows.Show(); }), DispatcherPriority.ContextIdle);
-        }
-
-        /*public static void Start_AC_Check (){
-
-            dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
-            dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
-            dispatcherTimer.Start();
-
-        }*/
-
-
-        /*public static void Stop_AC_Check()
-        {
-
-
-        }*/
-
 
     }
 }

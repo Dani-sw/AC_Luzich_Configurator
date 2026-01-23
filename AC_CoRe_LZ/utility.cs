@@ -1,4 +1,4 @@
-﻿using ExpressionDark;
+﻿using AC_CoRe.Dialog;
 using System;
 using System.Diagnostics;
 using System.Drawing;
@@ -48,9 +48,29 @@ namespace AC_CoRe
             }
             else
             {
-                DarkMessageBox.Show(string.Format("{0} Directory does not exist!", folderPath));
+                //DarkMessageBox.Show(string.Format("{0} Directory does not exist!", folderPath));
+                MessageBox_Custom.Show(string.Format("{0} Directory does not exist!", "OpenFolder Issue", MessageBox_Custom.MessageType.Error));
+                
+
             }
 
+        }
+
+        public static void Check_dblInstance()
+        {
+
+            // Nome del processo corrente
+            string processName = Process.GetCurrentProcess().ProcessName;
+
+            // Conta quante istanze esistono dello stesso EXE
+            int count = Process.GetProcessesByName("AC_Core_LZ").Length;
+
+            if (count > 1)
+            {
+                MessageBox_Custom.Show("The application is already running.", "AC_Core_LZ Double instance", MessageBox_Custom.MessageType.Error);
+                LogWriter.Message_Trace("Application is already running; the second launched instance has been closed.");
+                System.Windows.Application.Current.Shutdown();  // chiudi tutta l'app
+            }
         }
 
 

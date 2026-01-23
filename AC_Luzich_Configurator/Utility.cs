@@ -33,15 +33,18 @@ namespace AC_Configurator_STDL
             string processName = Process.GetCurrentProcess().ProcessName;
 
             // Conta quante istanze esistono dello stesso EXE
-            int count = Process.GetProcessesByName("TelemetryLab").Length;
+            int count = Process.GetProcessesByName("AC_Configurator_LZ").Length;
 
             if (count > 1)
             {
-                MessageBox_Custom.Show("The application is already running.", "Double instance", MessageBox_Custom.MessageType.Error);
+                MessageBox_Custom.Show("The application is already running.", "AC Configurator LZ Double instance", MessageBox_Custom.MessageType.Error);
                 LogWriter.Message_Trace("Application is already running; the second launched instance has been closed.");
                 Application.Current.Shutdown();  // chiudi tutta l'app
             }
         }
+
+        
+
 
         public static int ParseLaptime(string laptime)
         {

@@ -15,6 +15,7 @@ namespace AC_CoRe
         static public AC_CoRe_GUI  _AC_Core_GUI= new AC_CoRe_GUI();
         static public IniFile configfile;
 
+        public static string logs_path = @"Logs\\";
 
         //BBOX
         static public string BBox_StartBtn_index = "1";

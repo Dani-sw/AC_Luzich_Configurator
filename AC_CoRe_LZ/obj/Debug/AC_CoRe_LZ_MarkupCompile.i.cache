@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\assir\Desktop\AC_Luzich_Configurator\AC_CoRe_LZ\App.xaml
-31489011487
+41575255779
 
-26-496022652
+26546352843
 26-1005146030
-Ac_CoRe_GUI.xaml;Dialog\Advise_Mousexy.xaml;Dialog\PushButton_Alert.xaml;
+Ac_CoRe_GUI.xaml;Dialog\Advise_Mousexy.xaml;Dialog\MessageBox_Custom.xaml;Dialog\PushButton_Alert.xaml;
 
-True
+False
 

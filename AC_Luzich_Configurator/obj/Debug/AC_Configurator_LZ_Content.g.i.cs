@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("lz_icon.ico")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icon2.ico")]
 
 
